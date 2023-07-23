@@ -10,11 +10,11 @@ read -p "Enter your answer (y/n) " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
    echo  "We are now going reset to the previous commit and stash the changes (into working dir)"  # (optional) move to a new line
-   git reset $PREV_COMMIT
+   git reset --quiet $PREV_COMMIT
    # uncomment if you want a clean slate (but keep env files from deletion)
    #git clean -e *.env* -fd 
    T_NOW=$(date +"%H:%M")
-   git stash save "stashed back HEAD minus $DEFAULT_PREV_NUM changes at $T_NOW \n\n\n"
+   git stash --quiet save "stashed back HEAD minus $DEFAULT_PREV_NUM changes at $T_NOW \n\n\n"
 else 
   echo "Aborting..."   
 fi
