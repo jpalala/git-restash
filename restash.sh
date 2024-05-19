@@ -1,4 +1,6 @@
 #!/bin/bash
+# Filename: restash.sh
+
 ## Basic gist is 1. Get the previous commit through git rev-parse , reset it (--mixed by default), stash your working dir, (optionally) clean it, git s
 DEFAULT_PREV_NUM=1
 # (optional) first lookup your previous commits and find the commit
