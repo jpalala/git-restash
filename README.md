@@ -94,6 +94,17 @@ git config --global alias.wag "!git reset --hard && git clean -df"
 
 Originally it was nah but I prefer `wag`. Wag means "Do not" in the Filipino language, and also refers to a meme *"Wag mong subukan masisira ang buhay mo"*.
 
+#### Git sync
+
+```bash
+git stash && git checkout master && git fetch --all && git pull --rebase`
+```
+
+then, to get back your stashed code:
+
+```bash 
+git stash apply
+```
 
 TODO 
  - [] Allow user to either stash the working directory or just create a patch
